@@ -1,0 +1,24 @@
+@import "./styles/partials/colors";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: $bg-dark-2;
+  color: white;
+
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  width: 100%;
+
+}

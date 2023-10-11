@@ -1,0 +1,262 @@
+@import"./partials/colors";
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Inter:wght@100;300;600;800&family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Tourney:wght@100;200;300;400;600&display=swap');
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    .hero {
+        opacity: 1;
+        transition: 0.5s ease all;
+
+
+        .main-bg {
+            overflow-y: visible;
+
+            .plane {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0%;
+                pointer-events: none;
+
+                clip-path: polygon(90% 0, 100% 0, 11% 100%, 0 100%);
+                transition: 0.4s ease all;
+
+
+                picture {
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+
+            .expanded {
+                clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+                height: 100%
+            }
+        }
+
+        .hero-main {
+            margin-top: 2.3%;
+            padding: 10% 0 0 1rem;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            position: relative;
+            pointer-events: none;
+            color: $light-text-color;
+            transition: 0.2s ease all;
+
+
+            .name,
+            .content {
+                font-size: 3rem;
+                font-weight: 100;
+                font-family: "Comfortaa";
+                line-height: 1.4em;
+                transition: 0.3s ease all;
+
+            }
+
+            .name {
+                transform: translateX(5%);
+            }
+
+            .content {
+                transform: translate(65%, 10%);
+            }
+
+        }
+
+        .hero-light {
+            color: rgb(239, 224, 243);
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .name {
+                transform: translateX(40%)
+            }
+
+            .content {
+                transform: translate(40%, 10%);
+            }
+        }
+
+
+    }
+
+    section {
+        border: 1px solid $light-text-color;
+        border-radius: 15px;
+
+        animation-name: slideIn;
+        animation-duration: 0.5s;
+        /* 500 milliseconds */
+        animation-fill-mode: forwards;
+        /* Keeps the final state of the animation */
+        animation-timing-function: ease;
+        /* Optional timing function */
+        margin: 2rem 2rem;
+    }
+
+    .skills {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+
+
+        h1 {
+            font-weight: 300;
+        }
+
+        .skills-container {
+            display: flex;
+            font-size: 3.5rem;
+
+            .skill {
+                background: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 1s ease all;
+            }
+
+            .r {
+                border-radius: 100%;
+
+                padding: 0.3rem;
+            }
+
+            .r:hover {
+                color: $react-blue;
+            }
+
+            .html:hover {
+                color: $html-orange;
+            }
+
+            .css:hover {
+                color: $css-blue;
+            }
+
+            .js:hover {
+                color: $js-yellow;
+            }
+
+            .fb:hover {
+                color: $fb-orange;
+            }
+
+            .red:hover {
+                color: $red-purple;
+            }
+        }
+    }
+
+
+
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
+@media (max-width: 768px) {
+    main {
+        .hero {
+            .main-bg {
+                .plane {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0%;
+                    pointer-events: none;
+                    transition: 0.4s ease all;
+                    clip-path: none;
+
+                    picture {
+                        img {
+                            height: 200%;
+                            object-fit: fill;
+                        }
+                    }
+
+                }
+            }
+
+
+            .hero-main {
+                margin-top: 2.3%;
+                padding: 50% 0 0 0rem;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                pointer-events: none;
+                color: $light-text-color;
+                transition: 0.2s ease all;
+                gap: 3rem;
+
+
+                .name,
+                .content {
+                    padding: 2rem;
+                    font-size: 2.3rem;
+                    font-weight: 100;
+                    font-family: "Comfortaa " "sans-serif";
+                    line-height: 1.4em;
+                    transition: 0.3s ease all;
+
+                }
+
+                .name {
+                    transform: translateX(0%);
+                }
+
+                .content {
+                    transform: translate(0%, 0%);
+                }
+
+            }
+
+            .hero-light {
+                color: rgb(239, 224, 243);
+                justify-content: center;
+                align-items: center;
+                justify-content: space-evenly;
+
+                .name {
+                    transform: translateX(0%)
+                }
+
+                .content {
+                    transform: translate(0%, 0%);
+                }
+            }
+        }
+    }
+
+}

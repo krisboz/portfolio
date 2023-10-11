@@ -1,0 +1,324 @@
+.about-me {
+    margin-top: 3rem;
+
+    section {
+        border: none;
+    }
+
+    .about-me-description {
+        padding: 0 0 0 2rem;
+
+        .waving-hand {
+
+            animation-name: wave-animation;
+            /* Refers to the name of your @keyframes element below */
+            animation-duration: 2.5s;
+            /* Change to speed up or slow down */
+            animation-iteration-count: 15;
+            /* Never stop waving :) */
+            transform-origin: 50% 100%;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 3rem;
+            padding: 1rem;
+
+
+        }
+
+        .about-me-text {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+            gap: 0.5rem;
+        }
+
+        width: 50%;
+    }
+
+    .my-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+
+        .right-container {
+            width: 50%;
+
+
+            h1 {
+                font-weight: 300;
+                font-size: 3rem;
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                margin: 1rem 0;
+            }
+
+            .skills-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                svg {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 4rem;
+
+
+                }
+
+                .react-icon {
+                    border-radius: 100%;
+                    font-size: 1rem;
+
+                    svg {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100%;
+
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    .project-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 0 0 0;
+
+        h2 {
+            font-weight: 300;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .arrows-container {
+            font-size: 2.5rem;
+            display: flex;
+            gap: 5rem;
+
+            svg {
+                animation: bob 1.5s infinite;
+                animation-timing-function: ease-in-out;
+
+                &:nth-child(1) {
+                    animation-delay: 0.2s;
+                }
+
+                &:nth-child(2) {
+                    animation-delay: 0.4s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 0.6s;
+                }
+            }
+        }
+
+
+    }
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-8.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+@keyframes bob {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px); // Adjust the bobbing height as needed
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me {
+        margin-top: 3rem;
+
+        section {
+            border: none;
+        }
+
+        .about-me-description {
+            padding: .3rem;
+            margin: 0;
+            width: 100%;
+            box-sizing: border-box;
+
+
+
+
+            .waving-hand {
+
+                animation-name: wave-animation;
+                /* Refers to the name of your @keyframes element below */
+                animation-duration: 2.5s;
+                /* Change to speed up or slow down */
+                animation-iteration-count: 15;
+                /* Never stop waving :) */
+                transform-origin: 50% 100%;
+            }
+
+            h1 {
+                font-weight: 300;
+                font-size: 2rem;
+                padding: 0rem;
+
+
+            }
+
+            .about-me-text {
+                display: flex;
+                flex-direction: column;
+                font-size: .7rem;
+                gap: 0.5rem;
+
+                p {
+                    width: 100%;
+                    text-wrap: wrap;
+                }
+
+            }
+
+            width: 100%;
+        }
+
+        .my-skills {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+
+            .right-container {
+                width: 100%;
+
+
+                h1 {
+                    font-weight: 300;
+                    font-size: 2rem;
+                    padding: 0rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    font-size: .7rem;
+                    margin: 1rem 0;
+                }
+
+                .skills-container {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    place-items: center;
+
+                    svg {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 2rem;
+
+
+                    }
+
+                    .react-icon {
+                        border-radius: 100%;
+                        font-size: 1rem;
+
+                        svg {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 100%;
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+
+        .project-intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 0 0 0;
+
+            h2 {
+                font-weight: 300;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .arrows-container {
+                font-size: 2rem;
+                display: flex;
+                gap: 3rem;
+
+                svg {
+                    animation: bob 1.5s infinite;
+                    animation-timing-function: ease-in-out;
+
+                    &:nth-child(1) {
+                        animation-delay: 0.2s;
+                    }
+
+                    &:nth-child(2) {
+                        animation-delay: 0.4s;
+                    }
+
+                    &:nth-child(3) {
+                        animation-delay: 0.6s;
+                    }
+                }
+            }
+
+
+        }
+    }
+}

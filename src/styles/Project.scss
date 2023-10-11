@@ -1,0 +1,233 @@
+.new-project {
+    padding: 1rem;
+    display: grid;
+    margin-bottom: 5rem;
+    width: 80%;
+    grid-template-columns: 1.5fr 2fr;
+
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .project-name {
+            font-weight: 300;
+
+        }
+
+        .technologies {
+            font-size: 1.6rem;
+            display: flex;
+            gap: .33rem;
+
+            span {}
+        }
+
+        .project-description {}
+
+        .project-button-container {
+            a {
+                border: 1px solid white;
+                background: none;
+                padding: .5rem 1.5rem;
+                text-decoration: none;
+                color: white;
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+    .preview {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 2rem;
+
+        .desktop,
+        .mobile {
+            background-size: cover;
+            transform-origin: 50% 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+                overflow-y: hidden;
+                object-fit: cover;
+                object-position: top center;
+                border-radius: inherit;
+                //transform: translateZ(0);
+            }
+
+        }
+
+        .mobile {
+            width: 71px;
+            height: 141px;
+            border: 2px solid white;
+            border-radius: 7px;
+            position: relative;
+        }
+
+        .mobile::before {
+            content: "";
+            width: 30%;
+            height: 3%;
+            background-color: white;
+            position: absolute;
+            left: 35%;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .mobile::after {
+            content: "";
+            width: 50%;
+            height: 1%;
+            background-color: white;
+            position: absolute;
+            border-radius: 15px;
+            left: 25%;
+            bottom: 2%;
+        }
+
+        .desktop {
+            height: calc(21*9px);
+            /* Make each project container take up 100% of the parent's height */
+
+            /* Calculate the width based on the aspect ratio */
+            width: calc(21*16px);
+            border: 2px solid white;
+            border-top: 16px solid white;
+            border-radius: 7px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .desktop::after {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: orange;
+            top: -5%;
+            right: 5%;
+            margin-right: -.5em;
+            filter: drop-shadow(.5em 0px 0px red) drop-shadow(-.5em 0px 0px green);
+        }
+
+
+    }
+}
+
+@media (max-width: 768px) {
+    .new-project {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid grey;
+        border-radius: 0;
+
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .project-name {
+                font-weight: 300;
+
+            }
+
+            .technologies {
+                font-size: 1.6rem;
+                display: flex;
+                gap: .33rem;
+
+                span {}
+            }
+
+            .project-description {}
+
+            .project-button-container {
+                a {
+                    border: 1px solid white;
+                    background: none;
+                    padding: .5rem 1.5rem;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+
+        .preview {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            gap: 2rem;
+
+
+            .mobile {
+                background-size: cover;
+                transform-origin: 50% 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    overflow-y: hidden;
+                    object-fit: cover;
+                    object-position: top center;
+                    border-radius: inherit;
+                    //transform: translateZ(0);
+                }
+
+            }
+
+            .mobile {
+                width: 71px;
+                height: 141px;
+                border: 2px solid white;
+                border-radius: 7px;
+                position: relative;
+            }
+
+            .mobile::before {
+                content: "";
+                width: 30%;
+                height: 3%;
+                background-color: white;
+                position: absolute;
+                left: 35%;
+                border-radius: 0 0 15px 15px;
+            }
+
+            .mobile::after {
+                content: "";
+                width: 50%;
+                height: 1%;
+                background-color: white;
+                position: absolute;
+                border-radius: 15px;
+                left: 25%;
+                bottom: 2%;
+            }
+
+            .desktop {
+                display: none;
+
+            }
+
+
+
+
+        }
+    }
+}

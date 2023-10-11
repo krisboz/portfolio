@@ -1,0 +1,35 @@
+name - Kristijan Božinović  
+about me - tbd
+links to my shit - github
+skills - 
+User
+html css, sass, javascript, 
+react.js, react-router, firebase(firestore, authentication, hosting), 
+git, github, zustand, 
+redux, vite
+(im not sure that 
+should be included),  
+webpack, babel
+projects
+contact me
+
+fe - html, css, js, react
+be - fb, coming soon monogodb, nodejs
+state management - zustand, redux
+packagers - webpack, rollup, babel
+
+<div> My name whatever
+
+computer screen <a href='https://pngtree.com/freepng/computer-screen-png_8130422.html'>png image from pngtree.com/</a>
+<div> projects
+
+<div> skills
+
+<footer> contact me
+
+BiLogoHtml5
+BiLogoCss3
+BiLogoJavascript
+BiLogoReact
+BiLogoFirebase
+BiLogoRedux
