@@ -8,13 +8,16 @@ main {
     flex-direction: column;
     gap: 5rem;
 
+
     .hero {
         opacity: 1;
         transition: 0.5s ease all;
 
 
+
         .main-bg {
             overflow-y: visible;
+
 
             .plane {
                 position: absolute;
@@ -45,12 +48,13 @@ main {
         }
 
         .hero-main {
-            margin-top: 2.3%;
-            padding: 10% 0 0 1rem;
+            margin-top: 0;
+            padding: 0;
             display: flex;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             flex-direction: column;
+            justify-content: space-evenly;
             position: relative;
             pointer-events: none;
             color: $light-text-color;
@@ -63,41 +67,41 @@ main {
                 font-weight: 100;
                 font-family: "Comfortaa";
                 line-height: 1.4em;
-                transition: 0.3s ease all;
+                transition: 0.5s ease all;
 
             }
 
             .name {
                 transform: translateX(5%);
+
             }
 
             .content {
-                transform: translate(65%, 10%);
+                transform: translateX(70%);
             }
+
+
 
         }
 
-        .hero-light {
-            color: rgb(239, 224, 243);
-            justify-content: center;
-            align-items: center;
-            justify-content: space-evenly;
+        .expanded {
 
-            .name {
-                transform: translateX(40%)
-            }
 
+            .name,
             .content {
-                transform: translate(40%, 10%);
+
+                transform: translateX(45%);
             }
+
+
         }
+
+
 
 
     }
 
     section {
-        border: 1px solid $light-text-color;
-        border-radius: 15px;
 
         animation-name: slideIn;
         animation-duration: 0.5s;

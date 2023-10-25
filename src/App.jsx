@@ -17,7 +17,8 @@ function App() {
   return (
     <>
       <Main scrollTop={windowScrollTop} />
-      <Footer />
+
+      {windowScrollTop > 50 && <Footer />}
     </>
   );
 }

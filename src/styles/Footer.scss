@@ -111,7 +111,9 @@
             .interests {
                 display: flex;
                 flex-direction: column;
+                padding-top: 10%;
                 gap: 1rem;
+                align-items: center;
 
                 h2 {
                     font-weight: 300;

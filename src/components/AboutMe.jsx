@@ -28,13 +28,10 @@ const AboutMe = ({ scrollTop }) => {
         <article className="about-me-text">
           <p>I'M A WEB DEVELOPER BASED IN GERMANY</p>
           <p>
-            PASSIONATE ABOUT LIFELONG LEARNING AND CREATING SOLUTIONS TO
-            PROBLEMS
+            PASSIONATE ABOUT LIFELONG LEARNING, PICKING UP NEW TECHNOLOGIES AND
+            SOLVING PROBLEMS
           </p>{" "}
-          <p>
-            WHEN I'M NOT CODING YOU CAN FIND ME GAMING, WHIPPING UP TASTY DISHES
-            OR GETTING LOST IN THE WORLDS OF VARIOUS BOOKS
-          </p>
+          <p>WHEN I'M NOT CODING YOU CAN FIND ME GAMING, COOKING OR READING</p>
         </article>
       </section>
       <section className="my-skills">
@@ -46,14 +43,23 @@ const AboutMe = ({ scrollTop }) => {
               if (skills[i] === "react") {
                 return (
                   <div className="react-icon">
-                    <Icon
-                      key={i}
-                      style={{ transform: `rotate(${scrollTop / 2}deg)` }}
-                      title={skills[i].toUpperCase()}
-                    />
+                    <div className="icon-container">
+                      <Icon
+                        key={i}
+                        style={{ transform: `rotate(${scrollTop / 2}deg)` }}
+                        title={skills[i].toUpperCase()}
+                      />
+                      {skills[i].toUpperCase()}
+                    </div>
                   </div>
                 );
-              } else return <Icon key={i} title={skills[i].toUpperCase()} />;
+              } else
+                return (
+                  <div className="icon-container">
+                    <Icon key={i} title={skills[i].toUpperCase()} />{" "}
+                    {skills[i].toUpperCase()}
+                  </div>
+                );
             })}
           </div>
           <p>AND I'M ALWAYS ON THE LOOKOUT FOR NEW ONES</p>

@@ -13,15 +13,15 @@ const Projects = ({ scrollTop }) => {
   const confessit = {
     name: "confessit",
     description:
-      "Confessit is a social media app that allows users to share their confessions, judge and comment other confessions anonymously.The app uses React for the frontend and Firebase as the backend service.",
-    technologies: ["react", "firebase", "sass"],
+      "CONFESSIT IS A SOCIAL MEDIA APP THAT ALLOWS USERS TO SHARE THEIR CONFESSIONS, JUDGE AND COMMENT OTHER CONFESSIONS.THE APP USES REACT FOR THE FRONTEND AND FIREBASE AS THE BACKEND SERVICE.",
+    technologies: ["react", "firebase", "sass", "zustand"],
     link: "https://confessit-9ba45.web.app/",
   };
 
   const lotto = {
     name: "Lotto",
     description:
-      "Fronted app made to be like Eurojackpot, users can choose tickets, play, see how much money they make or lose and see results for 250.000 simulated players per turn.",
+      "FRONTED APP MADE TO BE LIKE EUROJACKPOT, USERS CAN CHOOSE TICKETS, PLAY, SEE HOW MUCH MONEY THEY MAKE OR LOSE AND SEE RESULTS FOR 250.000 SIMULATED PLAYERS PER TURN.",
     technologies: ["react", "css", "redux"],
     link: "https://krisboz.github.io/react-lottery-simulator/",
   };
@@ -29,7 +29,7 @@ const Projects = ({ scrollTop }) => {
   const restaurant = {
     name: "Pizzeria",
     description:
-      "Fully responsive frontend fake pizzeria app with a functioning shopping cart. Cart was implemented with a centralized state via Context API and reducer functions",
+      "FULLY RESPONSIVE FRONTEND FAKE PIZZERIA APP WITH A FUNCTIONING SHOPPING CART. CART WAS IMPLEMENTED WITH A CENTRALIZED STATE VIA CONTEXT API AND REDUCER FUNCTIONS",
     technologies: ["react", "sass"],
     link: "https://krisboz.github.io/react-restaurant",
   };
@@ -37,8 +37,6 @@ const Projects = ({ scrollTop }) => {
   return (
     <section className="projects">
       <div>
-        {" "}
-        <h1>Projects</h1>
         <Project projectObj={confessit} scrollTop={scrollTop} />
         <Project projectObj={lotto} scrollTop={scrollTop} />
         <Project projectObj={restaurant} scrollTop={scrollTop} />

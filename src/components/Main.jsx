@@ -62,7 +62,7 @@ const Main = ({ scrollTop }) => {
           </div>
         </div>
 
-        <div className={expanded ? "hero-main hero-light" : "hero-main"}>
+        <div className={expanded ? "hero-main expanded" : "hero-main"}>
           <div className="name">
             <h3>
               Kristijan <br /> Božinović

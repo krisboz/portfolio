@@ -93,6 +93,7 @@
         }
 
         .desktop {
+            display: block;
             height: calc(21*9px);
             /* Make each project container take up 100% of the parent's height */
 
