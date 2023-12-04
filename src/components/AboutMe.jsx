@@ -42,8 +42,8 @@ const AboutMe = ({ scrollTop }) => {
             {icons.map((Icon, i) => {
               if (skills[i] === "react") {
                 return (
-                  <div className="react-icon">
-                    <div className="icon-container">
+                  <div className="react-icon" key={i}>
+                    <div className="icon-container" key={i}>
                       <Icon
                         key={i}
                         style={{ transform: `rotate(${scrollTop / 2}deg)` }}
@@ -55,7 +55,7 @@ const AboutMe = ({ scrollTop }) => {
                 );
               } else
                 return (
-                  <div className="icon-container">
+                  <div className="icon-container" key={i}>
                     <Icon key={i} title={skills[i].toUpperCase()} />{" "}
                     {skills[i].toUpperCase()}
                   </div>

@@ -4,6 +4,8 @@ import lotoMobile from "../assets/lotto-mobile.png";
 import lotoDesktop from "../assets/lotto-desktop.png";
 import restaurantDesktop from "../assets/restaurant-desktop.png";
 import restaurantMobile from "../assets/restaurant-mobile.png";
+import asteroidsMobile from "../assets/asteroids-mobile.png";
+import asteroidsDesktop from "../assets/asteroids-desktop.png";
 
 const getImages = (name) => {
   const photos = {
@@ -18,6 +20,10 @@ const getImages = (name) => {
     Pizzeria: {
       mobile: restaurantMobile,
       desktop: restaurantDesktop,
+    },
+    AsteroidAtlas: {
+      mobile: asteroidsMobile,
+      desktop: asteroidsDesktop,
     },
   };
 

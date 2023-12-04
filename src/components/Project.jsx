@@ -4,7 +4,7 @@ import "../styles/Project.scss";
 import getImages from "./../helpers/getImages";
 import { MdOutlineOpenInNew as NewTabIcon } from "react-icons/md";
 
-const Project = ({ projectObj, scrollTop }) => {
+const Project = ({ projectObj, scrollTop, swingVal }) => {
   const photos = getImages(projectObj.name);
   //name, description, photos, technologies
 
@@ -51,7 +51,7 @@ const Project = ({ projectObj, scrollTop }) => {
           className="mobile"
           style={{
             transform: `rotate(${
-              projectObj.name === "Lotto"
+              swingVal
                 ? calculateBounceValue(scrollTop) * -1
                 : calculateBounceValue(scrollTop)
             }deg)`,
