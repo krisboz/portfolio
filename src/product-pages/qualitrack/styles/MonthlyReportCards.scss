@@ -1,0 +1,86 @@
+@import "./qtColors";
+
+
+.report-cards-wrapper {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.monthly-report-cards {
+    max-height: 380px;
+    padding: 1.5rem 0 1rem 0;
+
+
+    .expandable-image {
+        transition: .2s ease-in-out;
+    }
+
+
+
+    .report-1 {
+
+        z-index: 0;
+        transform: rotate(35deg);
+        transform-origin: bottom;
+
+
+
+
+
+    }
+
+    .report-2 {
+
+        z-index: 1;
+        transform: translateY(-100%);
+
+    }
+
+    .report-3 {
+
+        z-index: 2;
+        transform: translateY(-200%) rotate(-35deg);
+        transform-origin: bottom;
+
+
+
+    }
+
+
+
+
+
+}
+
+.hovered {
+
+    .report-1 {
+
+        transform: rotate(0deg) translateX(210px);
+    }
+
+
+    .report-3 {
+        transform: rotate(0deg) translateX(-210px) translateY(-200%);
+
+    }
+}
+
+@media (max-width: 768px) {
+    .monthly-report-cards {
+        max-height: 220px;
+
+        .report-1 {
+            transform: rotate(25deg);
+        }
+
+        .report-2 {
+            transform: translateY(-100%);
+        }
+
+        .report-3 {
+            transform: translateY(-200%) rotate(-25deg);
+        }
+    }
+}

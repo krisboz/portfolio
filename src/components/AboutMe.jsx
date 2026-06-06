@@ -65,13 +65,6 @@ const AboutMe = ({ scrollTop }) => {
           <p>AND I'M ALWAYS ON THE LOOKOUT FOR NEW ONES</p>
         </div>
       </section>
-      <div className="project-intro">
-        <h2>CHECK OUT MY PROJECTS</h2>
-
-        <div className="arrows-container">
-          <IoIosArrowDown /> <IoIosArrowDown /> <IoIosArrowDown />
-        </div>
-      </div>
     </div>
   );
 };

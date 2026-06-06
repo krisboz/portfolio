@@ -1,0 +1,16 @@
+.products {
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+        h2 {
+            font-weight: 300;
+            font-size: 2rem;
+            text-decoration: underline;
+            text-underline-offset: .5rem;
+
+        }
+    }
+
+}

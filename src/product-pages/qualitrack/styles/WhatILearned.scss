@@ -1,0 +1,73 @@
+.what-i-learned {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+
+    h4 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .wil-inner {
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 16px;
+
+        padding: 3rem;
+        gap: 1.25rem;
+
+        max-width: 800px;
+        margin: 0 auto;
+
+        p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        ul {
+            align-self: flex-start;
+
+            margin: 0.5rem 0 0.5rem 1.5rem;
+            padding: 0;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.75rem 2rem;
+
+            li {
+                font-size: 1.125rem;
+                line-height: 1.6;
+            }
+        }
+
+        p:first-child {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        p:last-child {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .what-i-learned {
+        padding: 2rem 1rem;
+
+        .wil-inner {
+            padding: 2rem 1.5rem;
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

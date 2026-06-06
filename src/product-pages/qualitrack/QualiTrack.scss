@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import"../../styles/partials/colors";
+@import "./styles/qtColors";
+
+
+.product-page {
+    width: 100%;
+    background: $bg-dark-2;
+    font-family: "Space Grotesk", sans-serif;
+
+    .title {
+        color: $bg-dark-2;
+        background-color: $title-background;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        padding: 2rem;
+
+        img {
+            width: 250px;
+        }
+
+        h2 {
+            font-weight: 300;
+        }
+
+
+    }
+
+    .the-before {
+        background-color: $title-background;
+
+        .inner {
+            background-color: $bg-dark-2;
+            border-radius: 24px 24px 0 0;
+            overflow: hidden;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                margin-bottom: 2rem;
+                font-weight: 600;
+            }
+
+            .pain-point {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding-bottom: 2rem;
+
+
+
+                .pp-name {
+                    font-size: 1.2rem;
+                }
+
+                .fragmented {
+                    display: flex;
+
+                    span {
+                        transition: .2s ease-in-out;
+                    }
+
+                    &:hover {
+                        .span-1 {
+                            transform-origin: 0% 100%;
+                            transform: rotate(-3deg);
+                        }
+
+                        .span-2 {
+                            transform-origin: 100% 0%;
+                            transform: rotate(3deg);
+                        }
+                    }
+                }
+
+                .pp-description {
+                    font-size: 1rem;
+                }
+
+
+
+
+            }
+        }
+
+
+    }
+
+    .intro {
+        display: flex;
+        padding: 2rem;
+
+        .description {
+            padding: 2rem;
+            display: grid;
+            place-content: center;
+            line-height: 2;
+        }
+
+        .screenshot {
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+
+    }
+
+}
+
+
+p {
+    font-size: 1.125rem; // Slightly larger (approx 18px)
+    line-height: 1.6; // Generous spacing between lines
+    //max-width: 65ch; // Limits width to ~65 characters per line
+    margin-bottom: 1.5rem; // Pushes the next paragraph down cleanly
+
+    // You can even style the first letter for a editorial look!
+
+}
+
+//ul li
+//accent orange block orange-accent-block
+//light color block   light-color-block
+
+.code-block {
+    font-family: monospace;
+    padding: .1rem .3rem;
+    border-radius: 4px;
+    background: rgb(63, 63, 63);
+    color: rgb(255, 136, 0);
+    margin: 0rem .5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .product-page {
+        .intro {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    p {
+        font-size: 1rem; // Slightly larger (approx 18px)
+        line-height: 1.3; // Generous spacing between lines
+        //max-width: 65ch; // Limits width to ~65 characters per line
+        margin-bottom: 1.2rem; // Pushes the next paragraph down cleanly
+
+        // You can even style the first letter for a editorial look!
+
+    }
+}

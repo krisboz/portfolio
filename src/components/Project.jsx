@@ -9,15 +9,12 @@ const Project = ({ projectObj, scrollTop, swingVal }) => {
   //name, description, photos, technologies
 
   function calculateBounceValue(scrollPixels) {
-    // Calculate the period of the sine wave (adjust as needed)
-    const period = 1000; // You can adjust this value to control the speed of the bounce
-    // Calculate the amplitude (half of the range between +10 and -10)
+    const period = 1000; // Speed of the bounce
+    //half of the range between +10 and -10
     const amplitude = 10;
 
-    // Calculate the angle based on the scroll position and period
     const angle = ((scrollPixels % period) * (2 * Math.PI)) / period;
 
-    // Calculate the sine of the angle and scale it to the amplitude
     const bounceValue = Math.sin(angle) * amplitude;
 
     return bounceValue;

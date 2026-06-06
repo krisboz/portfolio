@@ -1,0 +1,147 @@
+@import "./qtColors";
+@import "../../../styles/partials/colors";
+
+
+.stack-container {
+    margin-top: 1rem;
+    min-height: 250px;
+    background-color: $title-background;
+    color: $bg-dark-2;
+
+    h3 {
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+
+    .icons-container {
+        padding: 2rem 0 3rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .icon-container {
+            font-size: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            svg {
+                fill: $bg-dark-2;
+                transition: transform .1s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .sqlite {
+
+            .sqlite-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                gap: 1rem;
+                justify-content: space-evenly;
+
+
+                &:hover {
+                    svg {
+                        fill: orangered;
+
+                    }
+                }
+            }
+
+
+
+            .follower {
+                position: absolute;
+                border-radius: 12px;
+                background: rgba(210, 216, 230, 0.8);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                transform: translate(-100%, 10%);
+                animation: animateIn .3s;
+                width: 400px;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                justify-content: center;
+
+            }
+
+            .vanishing {
+                opacity: 0;
+                animation: fadeOut .4s;
+            }
+        }
+
+    }
+
+}
+
+@keyframes animateIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .stack-container {
+
+
+        .icons-container {
+            padding: 1rem 0 2rem 2rem;
+            flex-direction: column;
+            align-items: start;
+
+            .icon-container {
+                font-size: 4rem;
+                display: flex;
+                flex-direction: row;
+                align-items: end;
+                justify-content: center;
+                gap: 1rem;
+
+
+            }
+
+            .sqlite {
+
+                .sqlite-inner {
+                    flex-direction: row;
+                    align-items: end;
+
+
+                }
+            }
+        }
+    }
+}

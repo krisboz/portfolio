@@ -1,0 +1,69 @@
+.qt-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin: 0 0 1rem 1rem;
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+        line-height: 1.2;
+    }
+
+    .name {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .mail-link {
+        display: flex;
+        align-items: center;
+
+        color: lightblue;
+        flex-shrink: 0;
+    }
+
+    .copy-email-btn {
+        background: none;
+        border: none;
+
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+
+        padding: 0;
+
+        .success-icon {
+            color: green;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .qt-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+
+        margin: 1rem;
+
+        .name {
+            font-size: 0.95rem;
+        }
+
+        .copy-email-btn {
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+            word-break: break-word;
+        }
+    }
+}

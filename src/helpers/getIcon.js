@@ -10,9 +10,11 @@ import {
   BiLogoGithub,
 } from "react-icons/bi";
 
+import { SiSqlite, SiExpress } from "react-icons/si";
+
 import { GiBearFace } from "react-icons/gi";
 
-import { FaReact } from "react-icons/fa6";
+import { FaReact, FaNodeJs } from "react-icons/fa6";
 
 const getIcon = (icons) => {
   const iconMap = {
@@ -22,10 +24,13 @@ const getIcon = (icons) => {
     react: FaReact,
     firebase: BiLogoFirebase,
     redux: BiLogoRedux,
+    express: SiExpress,
     sass: BiLogoSass,
     git: BiLogoGit,
     github: BiLogoGithub,
     zustand: GiBearFace,
+    sqlite: SiSqlite,
+    node: FaNodeJs,
   };
 
   return icons.map((icon) => {

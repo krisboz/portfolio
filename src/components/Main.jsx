@@ -12,6 +12,8 @@ import {
 import Projects from "./Projects";
 
 import AboutMe from "./AboutMe";
+import Products from "./Products";
+
 //I am a self taught developer that specializes in react,
 //my free time specialization is pizza
 
@@ -51,11 +53,13 @@ const Main = ({ scrollTop }) => {
                 src={backgroundz}
                 alt="photo"
                 ref={imageRef}
-                loading="lazy"
                 style={{
-                  transform: `translate3d(-0.2px, -${
-                    expanded && scrollTop / 2
-                  }px, 0px`,
+                  transform:
+                    window.innerWidth > 768 // adjust breakpoint as needed
+                      ? `translate3d(-0.2px, -${
+                          expanded && scrollTop / 2
+                        }px, 0px)`
+                      : "none",
                 }}
               ></img>
             </picture>
@@ -78,6 +82,8 @@ const Main = ({ scrollTop }) => {
       {expanded && (
         <>
           <AboutMe scrollTop={scrollTop} />
+
+          <Products />
 
           <Projects scrollTop={scrollTop} />
         </>

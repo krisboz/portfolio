@@ -8,16 +8,12 @@ main {
     flex-direction: column;
     gap: 5rem;
 
-
     .hero {
         opacity: 1;
         transition: 0.5s ease all;
 
-
-
         .main-bg {
             overflow-y: visible;
-
 
             .plane {
                 position: absolute;
@@ -25,10 +21,8 @@ main {
                 width: 100%;
                 left: 0%;
                 pointer-events: none;
-
                 clip-path: polygon(90% 0, 100% 0, 11% 100%, 0 100%);
                 transition: 0.4s ease all;
-
 
                 picture {
                     img {
@@ -39,7 +33,6 @@ main {
                     }
                 }
             }
-
 
             .expanded {
                 clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
@@ -60,7 +53,6 @@ main {
             color: $light-text-color;
             transition: 0.2s ease all;
 
-
             .name,
             .content {
                 font-size: 3rem;
@@ -68,48 +60,31 @@ main {
                 font-family: "Comfortaa";
                 line-height: 1.4em;
                 transition: 0.5s ease all;
-
             }
 
             .name {
                 transform: translateX(5%);
-
             }
 
             .content {
                 transform: translateX(70%);
             }
-
-
-
         }
 
         .expanded {
 
-
             .name,
             .content {
-
                 transform: translateX(45%);
             }
-
-
         }
-
-
-
-
     }
 
     section {
-
         animation-name: slideIn;
         animation-duration: 0.5s;
-        /* 500 milliseconds */
         animation-fill-mode: forwards;
-        /* Keeps the final state of the animation */
         animation-timing-function: ease;
-        /* Optional timing function */
         margin: 2rem 2rem;
     }
 
@@ -120,7 +95,6 @@ main {
         align-items: center;
         gap: 2rem;
         padding: 1rem;
-
 
         h1 {
             font-weight: 300;
@@ -140,7 +114,6 @@ main {
 
             .r {
                 border-radius: 100%;
-
                 padding: 0.3rem;
             }
 
@@ -169,9 +142,6 @@ main {
             }
         }
     }
-
-
-
 }
 
 @keyframes slideIn {
@@ -184,10 +154,11 @@ main {
     }
 }
 
-
 @media (max-width: 768px) {
     main {
         .hero {
+            height: 101vh;
+
             .main-bg {
                 .plane {
                     position: absolute;
@@ -196,18 +167,23 @@ main {
                     left: 0%;
                     pointer-events: none;
                     transition: 0.4s ease all;
-                    clip-path: none;
+                    // Keep the diagonal clip-path on mobile
+                    clip-path: polygon(90% 0, 100% 0, 11% 100%, 0 100%);
 
                     picture {
                         img {
-                            height: 200%;
-                            object-fit: fill;
+                            // Adjust image sizing for mobile while maintaining clip-path
+                            height: 100%;
+                            object-fit: cover;
                         }
                     }
+                }
 
+                .expanded {
+                    // Maintain full expansion on scroll
+                    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
                 }
             }
-
 
             .hero-main {
                 margin-top: 2.3%;
@@ -224,43 +200,30 @@ main {
                 transition: 0.2s ease all;
                 gap: 3rem;
 
-
                 .name,
                 .content {
-                    padding: 2rem;
+                    // padding: 2rem;
                     font-size: 2.3rem;
                     font-weight: 100;
-                    font-family: "Comfortaa " "sans-serif";
+                    font-family: "Comfortaa", sans-serif;
                     line-height: 1.4em;
                     transition: 0.3s ease all;
-
+                    // Keep text centered on mobile
+                    //transform: translateX(0%) !important;
+                    text-align: center;
                 }
 
                 .name {
-                    transform: translateX(0%);
+                    transform: translate(-32%, -85%) !important;
+
                 }
 
                 .content {
-                    transform: translate(0%, 0%);
-                }
-
-            }
-
-            .hero-light {
-                color: rgb(239, 224, 243);
-                justify-content: center;
-                align-items: center;
-                justify-content: space-evenly;
-
-                .name {
-                    transform: translateX(0%)
-                }
-
-                .content {
-                    transform: translate(0%, 0%);
+                    transform: translate(20%, -130%) !important;
+                    position: relative;
+                    z-index: 1;
                 }
             }
         }
     }
-
 }

@@ -1,5 +1,6 @@
 import "../styles/Projects.scss";
 import Project from "./Project";
+import { IoIosArrowDown } from "react-icons/io";
 
 const projects = [
   {
@@ -36,18 +37,28 @@ const projects = [
 
 const Projects = ({ scrollTop }) => {
   return (
-    <section className="projects">
-      <div>
-        {projects.map((project, index) => (
-          <Project
-            projectObj={project}
-            key={index}
-            swingVal={index % 2 > 0}
-            scrollTop={scrollTop}
-          />
-        ))}
+    <>
+      <div className="project-intro">
+        <h2>CHECK OUT MY PROJECTS</h2>
+
+        <div className="arrows-container">
+          <IoIosArrowDown /> <IoIosArrowDown /> <IoIosArrowDown />
+        </div>
       </div>
-    </section>
+
+      <section className="projects">
+        <div>
+          {projects.map((project, index) => (
+            <Project
+              projectObj={project}
+              key={index}
+              swingVal={index % 2 > 0}
+              scrollTop={scrollTop}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 
