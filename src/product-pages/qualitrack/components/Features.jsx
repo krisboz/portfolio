@@ -843,15 +843,13 @@ function Reporting() {
             </li>
             <li>
               All invoices get saved with their weights it allows for
-              invoice-based/monthly/yearly printed reports which shows total
-              amounts of metal delivered aswell as the projected loss figure
-              which is a huge help when comparing with the "actual" state
+              invoice-based/monthly/yearly printed reports.
             </li>
           </ul>
 
           <p className="accented">
-            The time necessary to process a single invoice has been reduced by a{" "}
-            <strong>lot</strong>.
+            The time necessary to process a single invoice has been essentially
+            halved.
           </p>
         </div>
       </div>

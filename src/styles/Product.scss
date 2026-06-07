@@ -1,8 +1,13 @@
+@import"./partials/colors";
+
 .product-1 {
     border: 1px solid white;
+    background: rgb(241, 241, 241);
+    color: $bg-dark-1;
     margin: 1rem;
     border-radius: 18px;
     display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     padding: 2rem 0;
 
     .left {
@@ -11,6 +16,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+
+        img {
+            width: 200px;
+            padding: .5rem;
+            border-radius: 24px;
+        }
 
         .description {
             width: 60%;
@@ -33,6 +44,12 @@
         align-items: center;
         gap: 1rem;
 
+        img {
+            width: 600px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            border-radius: 14px;
+        }
+
         .product-read-more-btn {
 
             height: 40px;
@@ -43,9 +60,13 @@
             text-decoration: none;
             font-weight: 600;
             background: rgb(134, 13, 214);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
             border-radius: 12px;
+            transition: .2s;
 
             &:hover {
+                box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
                 background: rgb(71, 6, 114);
                 border: 1px solid rgb(134, 13, 214);
 
