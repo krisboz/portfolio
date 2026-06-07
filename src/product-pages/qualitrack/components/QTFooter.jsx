@@ -25,6 +25,8 @@ const QTFooter = () => {
     <div className="qt-footer">
       <p className="name">Kristijan Božinović, 2026.</p>
 
+      {/**
+
       <a
         href={`mailto:${emailAddress}?subject=Inquiry`}
         target="_blank"
@@ -44,6 +46,8 @@ const QTFooter = () => {
 
         {copied ? <FiCheck className="success-icon" /> : <FiCopy />}
       </button>
+
+ */}
     </div>
   );
 };
