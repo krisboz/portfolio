@@ -74,3 +74,22 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .product-1 {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .left {
+            width: 100%;
+        }
+
+        .right {
+
+            img {
+                width: 300px;
+            }
+        }
+    }
+}
