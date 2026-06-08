@@ -75,14 +75,14 @@
         }
 
         .description {
-            min-height: 110px;
+            min-height: 180px;
             //border: 1px solid white;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: .5rem;
-            gap: 1.25rem;
+            gap: .5rem;
             margin: 1.5rem 1rem 0 1rem;
             transition: .2s ease-in-out;
             animation: descriptionOpen .5s ease-in-out;
