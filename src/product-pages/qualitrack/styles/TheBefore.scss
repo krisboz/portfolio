@@ -82,13 +82,14 @@
             align-items: center;
             justify-content: center;
             padding: .5rem;
-            gap: .5rem;
+            gap: 1rem;
             margin: 1.5rem 1rem 0 1rem;
             transition: .2s ease-in-out;
             animation: descriptionOpen .5s ease-in-out;
 
             .pp-p {
                 line-height: 1;
+                margin-bottom: 0;
             }
 
         }
